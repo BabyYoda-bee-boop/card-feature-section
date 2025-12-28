@@ -6,12 +6,14 @@ body {
   font-family: $ff-primary;
   line-height: $flh-140;
   font-weight: 400;
+  background-color: $clr-page-bg;
 }
 
 // header
 .header {
   text-align: center;
   color: $clr-grey-500;
+  margin-top: em($space-250) * 3;
 
   &__title {
     font-size: $fs-700;

@@ -37,11 +37,13 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.4;
   font-weight: 400;
+  background-color: #fafafa;
 }
 
 .header {
   text-align: center;
   color: hsl(234, 12%, 34%);
+  margin-top: 7.5em;
 }
 .header__title {
   font-size: clamp(1.5625rem, 1.311rem + 1.0732vw, 2.25rem);
