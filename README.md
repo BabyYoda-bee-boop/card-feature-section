@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Click here](https://babyyoda-bee-boop.github.io/card-feature-section/)
-- Live Site URL: [Click here]()
+- Live Site URL: [Click here](https://www.frontendmentor.io/solutions/responsive-page-layout-css-grid-scss-variables-8iQnDXTjZe)
 
 ## My process
 
