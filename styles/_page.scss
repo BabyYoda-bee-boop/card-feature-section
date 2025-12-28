@@ -1,0 +1,117 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "utilities" as *;
+
+body {
+  font-family: $ff-primary;
+  line-height: $flh-140;
+  font-weight: 400;
+}
+
+// header
+.header {
+  text-align: center;
+  color: $clr-grey-500;
+
+  &__title {
+    font-size: $fs-700;
+    font-weight: 200;
+    letter-spacing: $fls-xs;
+    span {
+      font-weight: 600;
+    }
+    &__subtitle {
+      font-size: $fs-300;
+    }
+  }
+
+  &.container--narrow {
+    @include container-base(30rem);
+    width: 100%;
+  }
+}
+//e: header
+
+// card component
+section.cards {
+  gap: rem($space-200);
+  margin-block: rem($space-150) * 2;
+
+  @media (min-width: 48em) {
+    &.grid {
+      grid-template-columns: auto auto;
+      grid-template-areas:
+        "red red"
+        "cyan orange"
+        "blue blue";
+    }
+    .card__cyan {
+      grid-area: cyan;
+    }
+    .card__blue {
+      grid-area: blue;
+    }
+    .card__red {
+      grid-area: red;
+    }
+  }
+  @media (min-width: 75em) {
+    &.grid {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:
+        "cyan red blue"
+        "cyan red blue"
+        "cyan orange blue"
+        "cyan orange blue";
+      align-items: center;
+    }
+  }
+}
+.card {
+  position: relative;
+  display: grid;
+  max-width: 22rem;
+  padding: em($space-250);
+  border: 1px solid grey;
+  border-radius: $radius-200;
+  color: $clr-grey-500;
+  gap: em($space-050);
+  border: none;
+  box-shadow: 0 15px 30px -11px hsl(213 47% 67% / 0.5);
+  overflow: hidden;
+
+  &__title {
+    font-size: $fs-500;
+    font-weight: 600;
+    line-height: $flh-135;
+  }
+  &__subtitle {
+    font-size: $fs-300;
+    line-height: $flh-160;
+    color: $clr-grey-400;
+  }
+  &__img {
+    justify-self: end;
+  }
+
+  &::before {
+    content: "";
+    background-color: currentColor;
+    position: absolute;
+    height: 2%;
+    width: 100%;
+  }
+  &__blue::before {
+    background-color: $clr-accent-blue;
+  }
+  &__red::before {
+    background-color: $clr-accent-red;
+  }
+  &__orange::before {
+    background-color: $clr-accent-orange;
+  }
+  &__cyan::before {
+    background-color: $clr-accent-cyan;
+  }
+}

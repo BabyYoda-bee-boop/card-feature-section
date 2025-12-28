@@ -1,0 +1,47 @@
+// colors and fonts
+
+$clr-grey-500: hsl(234, 12%, 34%);
+$clr-grey-400: hsl(212, 6%, 44%);
+$clr-white: hsl(0, 0%, 100%);
+
+$clr-accent-red: hsl(0, 78%, 62%);
+$clr-accent-cyan: hsl(180, 62%, 55%);
+$clr-accent-blue: hsl(212, 86%, 64%);
+$clr-accent-orange: hsl(34, 97%, 64%);
+
+$ff-primary: "Poppins", sans-serif;
+
+$fs-700: clamp(
+  1.5625rem,
+  1.311rem + 1.0732vw,
+  2.25rem
+); //calc(clamp(2.125rem, 0.278vw + 2.069rem, 2.313rem)); //2rem;
+$fs-500: clamp(
+  1.125rem,
+  1.0793rem + 0.1951vw,
+  1.25rem
+); //calc(clamp(1.188rem, 0.185vw + 1.15rem, 1.313rem)); //1.25rem;
+$fs-400: calc(clamp(0.875rem, 0.185vw + 0.838rem, 1rem)); // .938rem;
+$fs-300: calc(clamp(0.75rem, 0.185vw + 0.713rem, 0.875rem)); // .813rem;
+
+// line height
+$flh-160: 1.6;
+$flh-140: 1.4;
+$flh-135: 1.35;
+
+// letter spacing
+$fls-xs: 0.016rem;
+
+//spacings
+
+$space-250: 2.5;
+$space-200: 2;
+$space-150: 1.5;
+$space-100: 1;
+$space-075: 0.75;
+$space-050: 0.5;
+$space-025: 0.25;
+
+//radii
+
+$radius-200: 0.6em;

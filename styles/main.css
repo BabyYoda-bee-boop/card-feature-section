@@ -1,3 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+img {
+  max-width: 100%;
+  block-size: auto;
+  display: block;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  width: 85%;
+  max-width: 90em;
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  justify-items: center;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.header {
+  text-align: center;
+  color: hsl(234, 12%, 34%);
+}
+.header__title {
+  font-size: clamp(1.5625rem, 1.311rem + 1.0732vw, 2.25rem);
+  font-weight: 200;
+  letter-spacing: 0.016rem;
+}
+.header__title span {
+  font-weight: 600;
+}
+.header__title__subtitle {
+  font-size: clamp(0.75rem, 0.185vw + 0.713rem, 0.875rem);
+}
+.header.container--narrow {
+  width: 85%;
+  max-width: 30rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+section.cards {
+  gap: 2rem;
+  margin-block: 3rem;
+}
+@media (min-width: 48em) {
+  section.cards.grid {
+    grid-template-columns: auto auto;
+    grid-template-areas: "red red" "cyan orange" "blue blue";
+  }
+  section.cards .card__cyan {
+    grid-area: cyan;
+  }
+  section.cards .card__blue {
+    grid-area: blue;
+  }
+  section.cards .card__red {
+    grid-area: red;
+  }
+}
+@media (min-width: 75em) {
+  section.cards.grid {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "cyan red blue" "cyan red blue" "cyan orange blue" "cyan orange blue";
+    align-items: center;
+  }
+}
+
+.card {
+  position: relative;
+  display: grid;
+  max-width: 22rem;
+  padding: 2.5em;
+  border: 1px solid grey;
+  border-radius: 0.6em;
+  color: hsl(234, 12%, 34%);
+  gap: 0.5em;
+  border: none;
+  box-shadow: 0 15px 30px -11px hsla(213, 47%, 67%, 0.5);
+  overflow: hidden;
+}
+.card__title {
+  font-size: clamp(1.125rem, 1.0793rem + 0.1951vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.card__subtitle {
+  font-size: clamp(0.75rem, 0.185vw + 0.713rem, 0.875rem);
+  line-height: 1.6;
+  color: hsl(212, 6%, 44%);
+}
+.card__img {
+  justify-self: end;
+}
+.card::before {
+  content: "";
+  background-color: currentColor;
+  position: absolute;
+  height: 2%;
+  width: 100%;
+}
+.card__blue::before {
+  background-color: hsl(212, 86%, 64%);
+}
+.card__red::before {
+  background-color: hsl(0, 78%, 62%);
+}
+.card__orange::before {
+  background-color: hsl(34, 97%, 64%);
+}
+.card__cyan::before {
+  background-color: hsl(180, 62%, 55%);
+}
 
 /*# sourceMappingURL=main.css.map */

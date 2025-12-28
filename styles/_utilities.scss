@@ -1,0 +1,7 @@
+@use "general-layouts" as *;
+
+@mixin container-base($max-width) {
+  width: 85%;
+  max-width: $max-width;
+  margin-inline: auto;
+}
