@@ -82,6 +82,7 @@ section.cards {
   border: none;
   box-shadow: 0 15px 30px -11px hsl(213 47% 67% / 0.5);
   overflow: hidden;
+  background-color: $clr-white;
 
   &__title {
     font-size: $fs-500;

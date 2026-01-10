@@ -103,6 +103,7 @@ section.cards {
   border: none;
   box-shadow: 0 15px 30px -11px hsla(213, 47%, 67%, 0.5);
   overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
 }
 .card__title {
   font-size: clamp(1.125rem, 1.0793rem + 0.1951vw, 1.25rem);
